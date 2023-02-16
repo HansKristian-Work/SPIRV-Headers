@@ -589,6 +589,9 @@ typedef enum SpvDecoration_ {
     SpvDecorationMMHostInterfaceMaxBurstINTEL = 6181,
     SpvDecorationMMHostInterfaceWaitRequestINTEL = 6182,
     SpvDecorationStableKernelArgumentINTEL = 6183,
+    SpvDecorationRawAccessChainRobustnessPerComponentFROG = 40001,
+    SpvDecorationRawAccessChainRobustnessPerElementFROG = 40002,
+    SpvDecorationRawAccessChainRobustnessNoneFROG = 40003,
     SpvDecorationMax = 0x7fffffff,
 } SpvDecoration;
 
@@ -1148,6 +1151,7 @@ typedef enum SpvCapability_ {
     SpvCapabilitySplitBarrierINTEL = 6141,
     SpvCapabilityFPGAArgumentInterfacesINTEL = 6174,
     SpvCapabilityGroupUniformArithmeticKHR = 6400,
+    SpvCapabilityRawAccessChainsFROG = 40004,
     SpvCapabilityMax = 0x7fffffff,
 } SpvCapability;
 
@@ -1958,6 +1962,7 @@ typedef enum SpvOp_ {
     SpvOpGroupLogicalAndKHR = 6406,
     SpvOpGroupLogicalOrKHR = 6407,
     SpvOpGroupLogicalXorKHR = 6408,
+    SpvOpRawAccessChainFROG = 40000,
     SpvOpMax = 0x7fffffff,
 } SpvOp;
 
@@ -2661,6 +2666,7 @@ inline void SpvHasResultAndType(SpvOp opcode, bool *hasResult, bool *hasResultTy
     case SpvOpGroupLogicalAndKHR: *hasResult = true; *hasResultType = true; break;
     case SpvOpGroupLogicalOrKHR: *hasResult = true; *hasResultType = true; break;
     case SpvOpGroupLogicalXorKHR: *hasResult = true; *hasResultType = true; break;
+    case SpvOpRawAccessChainFROG: *hasResult = true; *hasResultType = true; break;
     }
 }
 #endif /* SPV_ENABLE_UTILITY_CODE */

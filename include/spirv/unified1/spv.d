@@ -586,6 +586,9 @@ enum Decoration : uint
     MMHostInterfaceMaxBurstINTEL = 6181,
     MMHostInterfaceWaitRequestINTEL = 6182,
     StableKernelArgumentINTEL = 6183,
+    RawAccessChainRobustnessPerComponentFROG = 40001,
+    RawAccessChainRobustnessPerElementFROG = 40002,
+    RawAccessChainRobustnessNoneFROG = 40003,
 }
 
 enum BuiltIn : uint
@@ -1151,6 +1154,7 @@ enum Capability : uint
     SplitBarrierINTEL = 6141,
     FPGAArgumentInterfacesINTEL = 6174,
     GroupUniformArithmeticKHR = 6400,
+    RawAccessChainsFROG = 40004,
 }
 
 enum RayFlagsShift : uint
@@ -1963,6 +1967,7 @@ enum Op : uint
     OpGroupLogicalAndKHR = 6406,
     OpGroupLogicalOrKHR = 6407,
     OpGroupLogicalXorKHR = 6408,
+    OpRawAccessChainFROG = 40000,
 }
 
 

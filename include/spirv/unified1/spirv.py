@@ -558,6 +558,9 @@ spv = {
         'MMHostInterfaceMaxBurstINTEL' : 6181,
         'MMHostInterfaceWaitRequestINTEL' : 6182,
         'StableKernelArgumentINTEL' : 6183,
+        'RawAccessChainRobustnessPerComponentFROG' : 40001,
+        'RawAccessChainRobustnessPerElementFROG' : 40002,
+        'RawAccessChainRobustnessNoneFROG' : 40003,
     },
 
     'BuiltIn' : {
@@ -1106,6 +1109,7 @@ spv = {
         'SplitBarrierINTEL' : 6141,
         'FPGAArgumentInterfacesINTEL' : 6174,
         'GroupUniformArithmeticKHR' : 6400,
+        'RawAccessChainsFROG' : 40004,
     },
 
     'RayFlagsShift' : {
@@ -1905,6 +1909,7 @@ spv = {
         'OpGroupLogicalAndKHR' : 6406,
         'OpGroupLogicalOrKHR' : 6407,
         'OpGroupLogicalXorKHR' : 6408,
+        'OpRawAccessChainFROG' : 40000,
     },
 
 }

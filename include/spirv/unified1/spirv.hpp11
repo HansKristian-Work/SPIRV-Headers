@@ -585,6 +585,9 @@ enum class Decoration : unsigned {
     MMHostInterfaceMaxBurstINTEL = 6181,
     MMHostInterfaceWaitRequestINTEL = 6182,
     StableKernelArgumentINTEL = 6183,
+    RawAccessChainRobustnessPerComponentFROG = 40001,
+    RawAccessChainRobustnessPerElementFROG = 40002,
+    RawAccessChainRobustnessNoneFROG = 40003,
     Max = 0x7fffffff,
 };
 
@@ -1144,6 +1147,7 @@ enum class Capability : unsigned {
     SplitBarrierINTEL = 6141,
     FPGAArgumentInterfacesINTEL = 6174,
     GroupUniformArithmeticKHR = 6400,
+    RawAccessChainsFROG = 40004,
     Max = 0x7fffffff,
 };
 
@@ -1954,6 +1958,7 @@ enum class Op : unsigned {
     OpGroupLogicalAndKHR = 6406,
     OpGroupLogicalOrKHR = 6407,
     OpGroupLogicalXorKHR = 6408,
+    OpRawAccessChainFROG = 40000,
     Max = 0x7fffffff,
 };
 
@@ -2657,6 +2662,7 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case Op::OpGroupLogicalAndKHR: *hasResult = true; *hasResultType = true; break;
     case Op::OpGroupLogicalOrKHR: *hasResult = true; *hasResultType = true; break;
     case Op::OpGroupLogicalXorKHR: *hasResult = true; *hasResultType = true; break;
+    case Op::OpRawAccessChainFROG: *hasResult = true; *hasResultType = true; break;
     }
 }
 #endif /* SPV_ENABLE_UTILITY_CODE */

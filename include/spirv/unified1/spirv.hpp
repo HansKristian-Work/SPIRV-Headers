@@ -585,6 +585,9 @@ enum Decoration {
     DecorationMMHostInterfaceMaxBurstINTEL = 6181,
     DecorationMMHostInterfaceWaitRequestINTEL = 6182,
     DecorationStableKernelArgumentINTEL = 6183,
+    DecorationRawAccessChainRobustnessPerComponentFROG = 40001,
+    DecorationRawAccessChainRobustnessPerElementFROG = 40002,
+    DecorationRawAccessChainRobustnessNoneFROG = 40003,
     DecorationMax = 0x7fffffff,
 };
 
@@ -1144,6 +1147,7 @@ enum Capability {
     CapabilitySplitBarrierINTEL = 6141,
     CapabilityFPGAArgumentInterfacesINTEL = 6174,
     CapabilityGroupUniformArithmeticKHR = 6400,
+    CapabilityRawAccessChainsFROG = 40004,
     CapabilityMax = 0x7fffffff,
 };
 
@@ -1954,6 +1958,7 @@ enum Op {
     OpGroupLogicalAndKHR = 6406,
     OpGroupLogicalOrKHR = 6407,
     OpGroupLogicalXorKHR = 6408,
+    OpRawAccessChainFROG = 40000,
     OpMax = 0x7fffffff,
 };
 
@@ -2657,6 +2662,7 @@ inline void HasResultAndType(Op opcode, bool *hasResult, bool *hasResultType) {
     case OpGroupLogicalAndKHR: *hasResult = true; *hasResultType = true; break;
     case OpGroupLogicalOrKHR: *hasResult = true; *hasResultType = true; break;
     case OpGroupLogicalXorKHR: *hasResult = true; *hasResultType = true; break;
+    case OpRawAccessChainFROG: *hasResult = true; *hasResultType = true; break;
     }
 }
 #endif /* SPV_ENABLE_UTILITY_CODE */

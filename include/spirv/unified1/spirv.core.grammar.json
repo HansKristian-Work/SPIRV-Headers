@@ -9178,6 +9178,25 @@
       ],
       "capabilities" : [ "GroupUniformArithmeticKHR" ],
       "version" : "None"
+    },
+    {
+      "opname" : "OpRawAccessChainFROG",
+      "class"  : "Memory",
+      "opcode" : 40000,
+      "operands" : [
+        { "kind" : "IdResultType" },
+        { "kind" : "IdResult" },
+        { "kind" : "IdRef",          "name" : "'Base'" },
+        { "kind" : "IdRef",          "name" : "'Byte stride'" },
+        { "kind" : "IdRef",          "name" : "'Element index'" },
+        { "kind" : "IdRef",          "name" : "'Byte offset'" }
+      ],
+	  "capabilities" : [
+		  "RawAccessChainsFROG"
+	  ],
+	  "extensions" : [
+		  "SPV_FROG_raw_access_chains"
+	  ]
     }
   ],
   "operand_kinds" : [
@@ -12588,7 +12607,25 @@
           "value" : 6183,
           "capabilities" : [ "FPGAArgumentInterfacesINTEL" ],
           "version" : "None"
-        }
+        },
+		{
+			"enumerant" : "RawAccessChainRobustnessPerComponentFROG",
+			"value" : 40001,
+			"capabilities" : [ "RawAccessChainsFROG" ],
+			"extensions" : [ "SPV_FROG_raw_access_chains" ]
+		},
+		{
+			"enumerant" : "RawAccessChainRobustnessPerElementFROG",
+			"value" : 40002,
+			"capabilities" : [ "RawAccessChainsFROG" ],
+			"extensions" : [ "SPV_FROG_raw_access_chains" ]
+		},
+		{
+			"enumerant" : "RawAccessChainRobustnessNoneFROG",
+			"value" : 40003,
+			"capabilities" : [ "RawAccessChainsFROG" ],
+			"extensions" : [ "SPV_FROG_raw_access_chains" ]
+		}
       ]
     },
     {
@@ -14903,6 +14940,12 @@
           "enumerant" : "GroupUniformArithmeticKHR",
           "value" : 6400,
           "extensions" : [ "SPV_KHR_uniform_group_instructions"],
+          "version" : "None"
+        },
+        {
+          "enumerant" : "RawAccessChainsFROG",
+          "value" : 40004,
+          "extensions" : [ "SPV_FROG_raw_access_chains" ],
           "version" : "None"
         }
       ]
